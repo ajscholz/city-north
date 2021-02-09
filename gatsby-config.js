@@ -1,49 +1,49 @@
 module.exports = {
   siteMetadata: {
-    title: "City North Church",
+    title: 'City North Church',
   },
   plugins: [
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: "ZdJAj6bTTfsC3TCBFY0VSkFoaCTBEfL_E5WrLFZUUS0",
-        spaceId: "hiqf9clqtwll",
+        accessToken: 'ZdJAj6bTTfsC3TCBFY0VSkFoaCTBEfL_E5WrLFZUUS0',
+        spaceId: 'hiqf9clqtwll',
       },
     },
-    "gatsby-plugin-postcss",
+    'gatsby-plugin-postcss',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: "",
+        trackingId: 'UA-113118455-1',
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-offline",
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-offline',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-transformer-remark",
-    "gatsby-transformer-sharp",
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
-};
+}
