@@ -57,7 +57,7 @@ const HeroBanner = ({ banner }) => {
         <GatsbyImage
           image={banner.image.gatsbyImageData}
           alt='Welcome to City North Church'
-          className='h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full'
+          className='h-72 w-full object-cover sm:h-96 lg:w-full lg:h-full'
         />
         {/* <img
           className='h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full'
