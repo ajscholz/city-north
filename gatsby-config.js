@@ -20,13 +20,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: 'src/images/icon.png',
-      },
-    },
+    `gatsby-plugin-image`,
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     {
@@ -45,5 +39,12 @@ module.exports = {
       },
       __key: 'pages',
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 }
