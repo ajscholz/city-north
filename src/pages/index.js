@@ -8,17 +8,15 @@ import Layout from '../components/layout'
 const IndexPage = ({ data }) => {
   return (
     <>
-      <Layout>
-        <HeroBanner banner={data.page.banner} />
-        <FeaturesSection />
-        <CallToActionSection />
+      <HeroBanner banner={data.page.banner} />
+      <FeaturesSection />
+      <CallToActionSection />
 
-        <GenericSection>Stories section</GenericSection>
+      <GenericSection>Stories section</GenericSection>
 
-        <GenericSection>Recent Messages and Series</GenericSection>
+      <GenericSection>Recent Messages and Series</GenericSection>
 
-        <GenericSection>Quick steps</GenericSection>
-      </Layout>
+      <GenericSection>Quick steps</GenericSection>
     </>
   )
 }
