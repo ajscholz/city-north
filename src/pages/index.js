@@ -10,7 +10,6 @@ import SEO from '../components/SEO'
 const IndexPage = ({ data }) => {
   const { seo } = data
 
-  console.log(seo)
   return (
     <>
       <SEO
