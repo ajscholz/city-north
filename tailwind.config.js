@@ -6,6 +6,11 @@ module.exports = {
       sans: ['Montserrat', 'sans-serif'],
     },
     extend: {
+      height: {
+        112: '28rem',
+        128: '32rem',
+        144: '36rem',
+      },
       colors: {
         'cn-yellow': {
           50: '#fdfdf7',

@@ -1,13 +1,20 @@
 import React from 'react'
-import Navbar from './Navbar'
+// import Navbar from './Navbar'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+// import { GatsbyImage } from 'gatsby-plugin-image'
+import GatsbyImageFocalPoint from './GatsbyImageFocalPoint'
 
 const HeroBanner = ({ banner }) => {
+  const { focalPoint } = banner.imageFocalPoint
+  const size = banner.image.file.details.image
+  const focalPointData = {
+    focalPoint: { x: focalPoint.x - size.width * 0.28, y: focalPoint.y },
+    size: { w: size.width, h: size.height },
+  }
   return (
-    <div className='relative bg-white overflow-hidden'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32'>
+    <div className='relative bg-white overflow-hidden flex flex-col-reverse lg:block'>
+      <div className='mx-8 lg:max-w-7xl lg:mx-auto'>
+        <div className='relative -mt-24 sm:-mt-16 md:-mt-12 lg:mt-0 z-10 pt-8 pb-8 px-3 lg:px-0 lg:pt-0 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 shadow-2xl lg:shadow-none rounded-xl lg:rounded-none'>
           <svg
             className='hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2'
             fill='currentColor'
@@ -18,9 +25,11 @@ const HeroBanner = ({ banner }) => {
             <polygon points='50,0 100,0 50,100 0,100' />
           </svg>
 
-          <Navbar />
+          <div className='h-16 hidden lg:block' />
 
-          <main className='mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28'>
+          {/* <Navbar /> */}
+
+          <main className='mt-0 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 '>
             <div className='sm:text-center lg:text-left'>
               <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
                 <span className='block text-cn-dk-blue-600'>Your story</span>
@@ -31,7 +40,7 @@ const HeroBanner = ({ banner }) => {
                 lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
                 fugiat aliqua.
               </p>
-              <div className='mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
+              <div className='mt-5 sm:mt-8 flex sm:justify-center mr-auto lg:justify-start'>
                 <div className='rounded-md shadow'>
                   <Link
                     to='/visit'
@@ -54,10 +63,12 @@ const HeroBanner = ({ banner }) => {
         </div>
       </div>
       <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
-        <GatsbyImage
+        <GatsbyImageFocalPoint
           image={banner.image.gatsbyImageData}
           alt='Welcome to City North Church'
-          className='h-72 w-full object-cover sm:h-96 lg:w-full lg:h-full'
+          loading='eager'
+          className='h-112 w-full object-cover md:h-128 lg:w-full lg:h-full'
+          focalPointData={focalPointData}
         />
         {/* <img
           className='h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full'

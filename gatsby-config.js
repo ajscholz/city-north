@@ -28,6 +28,7 @@ module.exports = {
     `gatsby-plugin-image`,
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
