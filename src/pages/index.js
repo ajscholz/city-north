@@ -2,13 +2,22 @@ import React from 'react'
 import HeroBanner from '../components/HeroBanner'
 import { graphql } from 'gatsby'
 import FeaturesSection from '../components/sections/FeaturesSection'
-import CallToActionSection from '../components/sections/CallToActionSection'
+// import CallToActionSection from '../components/sections/CallToActionSection'
 import StoriesSection from '../components/sections/StoriesSection'
 import FeaturedCardsSection from '../components/sections/FeaturedCardsSection'
+import SEO from '../components/SEO'
 
 const IndexPage = ({ data }) => {
+  const { seo } = data
+
+  console.log(seo)
   return (
     <>
+      <SEO
+        title='Home'
+        description="Welcome to City North Church. We help people find a life-giving relationship with Jesus. No matter where you've been your story matters here."
+        image={seo.banner.image.file.url}
+      />
       <HeroBanner banner={data.page.banner} />
       <FeaturesSection />
       <StoriesSection />
@@ -315,6 +324,9 @@ export const data = graphql`
       banner {
         ...PageBannerFragment
       }
+    }
+    seo: contentfulPage(title: { eq: "Index" }) {
+      ...SeoFragment
     }
   }
 `

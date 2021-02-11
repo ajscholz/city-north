@@ -1,6 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'City North Church',
+    siteUrl: 'https://citynorth.church',
+    titleTemplate: '%s · City North Church',
+    description:
+      "A new church in Sunbury, Ohio that helps lead people into a life-giving relationship with Jesus. No matter where you've been your story matters here.",
+    twitterUsername: `@citynorthonline`,
   },
   plugins: [
     {

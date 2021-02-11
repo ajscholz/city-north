@@ -83,6 +83,7 @@ export const query = graphql`
     image {
       gatsbyImageData(formats: WEBP, quality: 90)
       file {
+        url
         details {
           image {
             height
