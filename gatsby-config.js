@@ -27,7 +27,6 @@ module.exports = {
     'gatsby-plugin-sitemap',
     `gatsby-plugin-image`,
     'gatsby-transformer-remark',
-    `gatsby-plugin-mdx`,
     'gatsby-transformer-sharp',
     `gatsby-plugin-remove-trailing-slashes`,
     {
