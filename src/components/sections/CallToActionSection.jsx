@@ -2,8 +2,7 @@ import React from 'react'
 
 const CallToActionSection = () => {
   return (
-    // <!-- This example requires Tailwind CSS v2.0+ -->
-    <div className='bg-white'>
+    <section className='bg-white'>
       <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8 lg:flex lg:items-center lg:justify-between'>
         <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
           <span className='block'>Ready to see life change?</span>
@@ -30,7 +29,7 @@ const CallToActionSection = () => {
           </div> */}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

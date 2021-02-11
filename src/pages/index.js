@@ -4,15 +4,15 @@ import { graphql } from 'gatsby'
 import FeaturesSection from '../components/sections/FeaturesSection'
 import CallToActionSection from '../components/sections/CallToActionSection'
 import Layout from '../components/layout'
+import StoriesSection from '../components/sections/StoriesSection'
 
 const IndexPage = ({ data }) => {
   return (
     <>
       <HeroBanner banner={data.page.banner} />
       <FeaturesSection />
+      <StoriesSection />
       <CallToActionSection />
-
-      <GenericSection>Stories section</GenericSection>
 
       <GenericSection>Recent Messages and Series</GenericSection>
 

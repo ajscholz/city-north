@@ -3,7 +3,7 @@ import React from 'react'
 const FeaturesSection = () => {
   return (
     // <!-- This example requires Tailwind CSS v2.0+ -->
-    <div className='py-20 bg-cn-dk-blue-50'>
+    <section className='py-20 bg-cn-dk-blue-50'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='lg:text-center'>
           <h2 className='text-base text-cn-dk-blue-600 font-semibold tracking-wide uppercase'>
@@ -89,7 +89,7 @@ const FeaturesSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
