@@ -8,7 +8,6 @@ import { useLocation } from '@reach/router'
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
-  console.log('location', location)
 
   const data = useStaticQuery(graphql`
     {

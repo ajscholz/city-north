@@ -6,7 +6,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const SEO = ({ title, description, image, article, url }) => {
   const { pathname } = useLocation()
-  console.log(pathname)
   const { site, defaultImage } = useStaticQuery(query)
 
   const {
